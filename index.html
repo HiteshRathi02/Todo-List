@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+
+    <!-- Add Item Section -->
+    <form id="todo-form" class="add-item">
+      <input type="text" id="task-name" placeholder="Todo" required />
+      <input type="date" id="task-date" required />
+      <select id="task-priority" required>
+        <option value="" disabled selected>Priority</option>
+        <option value="Priority: High">High</option>
+        <option value="Priority: Medium">Medium</option>
+        <option value="Priority: Low">Low</option>
+      </select>
+      <button type="submit">Add Item</button>
+    </form>
+
+    <!-- Task Sections -->
+    <section class="tasks">
+      <h2>Today’s TodoList</h2>
+      <ul id="today-tasks" class="task-list"></ul>
+
+      <h2>Future TodoList</h2>
+      <ul id="future-tasks" class="task-list"></ul>
+
+      <h2>Completed TodoList</h2>
+      <ul id="completed-tasks" class="task-list completed"></ul>
+    </section>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
